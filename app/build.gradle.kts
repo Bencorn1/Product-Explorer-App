@@ -41,6 +41,8 @@ android {
 }
 
 dependencies {
+    implementation(libs.androidx.legacy.support.v4)
+    implementation(libs.androidx.fragment.ktx)
     val hilt_version = "2.48.1"
 
     implementation(libs.androidx.core.ktx)
@@ -57,6 +59,9 @@ dependencies {
     implementation("com.google.dagger:hilt-android:$hilt_version")
     kapt("com.google.dagger:hilt-android-compiler:$hilt_version")
 
+    // RecyclerView
+    implementation ("androidx.recyclerview:recyclerview:1.3.2")
+
     // Coroutines dependencies
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0")
@@ -71,4 +76,12 @@ dependencies {
 
     // Timber dependency
     implementation("com.jakewharton.timber:timber:5.0.1")
+
+    // Gson library
+    implementation ("com.google.code.gson:gson:2.10.1")
+
+    // Navigation Component
+    implementation ("androidx.navigation:navigation-fragment-ktx:2.7.4")
+    implementation ("androidx.navigation:navigation-ui-ktx:2.7.4")
+
 }
