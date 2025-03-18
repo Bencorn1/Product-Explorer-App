@@ -3,6 +3,7 @@ package com.example.productexplorerapp
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.productexplorerapp.databinding.ItemProductBinding
 
@@ -23,12 +24,11 @@ class ProductAdapter(private val productList: List<Product>) :
         holder.binding.productPrice.text = product.price
         holder.binding.productImage.setImageResource(product.imageRes)
 
-//        // Navigate to detail fragment when clicked
-//        holder.itemView.setOnClickListener {
-//            val action =
-//                ProductListFragmentDirections.actionProductListFragmentToProductDetailFragment()
-//            it.findNavController().navigate(action)
-//        }
+        // Navigate to detail fragment when clicked
+        holder.itemView.setOnClickListener {
+            val action = ProductListFragmentDirections.actionProductListFragmentToProductDetailFragment(product)
+            it.findNavController().navigate(action)
+        }
     }
 
     override fun getItemCount() = productList.size

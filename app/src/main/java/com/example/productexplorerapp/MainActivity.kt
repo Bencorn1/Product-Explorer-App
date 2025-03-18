@@ -7,7 +7,6 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.NavigationUI.setupActionBarWithNavController
 import com.example.productexplorerapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -26,11 +25,11 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        // Setup Navigation Controller
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navController = navHostFragment.navController
 
-//        setupActionBarWithNavController(navController)
     }
 
     override fun onSupportNavigateUp(): Boolean {

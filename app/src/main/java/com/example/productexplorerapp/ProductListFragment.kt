@@ -49,6 +49,7 @@ class ProductListFragment : Fragment() {
         // Set up RecyclerView
         val adapter = ProductAdapter(productList)
         binding.recyclerView.adapter = adapter
+
     }
 
     override fun onDestroyView() {
