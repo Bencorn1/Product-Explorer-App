@@ -9,22 +9,21 @@
         android:id="@+id/productListFragment"
         android:name="com.example.productexplorerapp.ProductListFragment"
         android:label="fragment_product_list"
-        tools:layout="@layout/fragment_product_list" />
+        tools:layout="@layout/fragment_product_list">
+        <action
+            android:id="@+id/action_productListFragment_to_productDetailFragment"
+            app:destination="@id/productDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/productDetailsFragment"
+        android:name="com.example.productexplorerapp.ProductDetailsFragment"
+        android:label="ProductDetailsFragment"
+        tools:layout="@layout/fragment_product_details">
+        <argument
+            android:name="product"
+            app:argType="com.example.productexplorerapp.Product"
+            app:nullable="false" />
+    </fragment>
+
 </navigation>
-
-
-
-
-
-<!--    <action-->
-<!--        android:id="@+id/action_productListFragment_to_productDetailFragment"-->
-<!--        app:destination="@id/productDetailFragment"-->
-<!--        app:enterAnim="@anim/slide_in_right"-->
-<!--        app:exitAnim="@anim/slide_out_left" />-->
-
-
-    <!--<fragment-->
-    <!--    android:id="@+id/productDetailFragment"-->
-    <!--    android:name="com.yourpackage.ui.ProductDetailFragment"-->
-    <!--    android:label="Product Details"-->
-    <!--    tools:layout="@layout/fragment_product_detail" />-->
