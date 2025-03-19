@@ -6,8 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
+import com.bumptech.glide.Glide
 import com.example.productexplorerapp.databinding.FragmentProductDetailsBinding
+import dagger.hilt.android.AndroidEntryPoint
+import timber.log.Timber
 
+@AndroidEntryPoint
 class ProductDetailsFragment : Fragment() {
     private var _binding: FragmentProductDetailsBinding? = null
     private val binding get() = _binding!!
@@ -21,9 +25,17 @@ class ProductDetailsFragment : Fragment() {
         _binding = FragmentProductDetailsBinding.inflate(inflater, container, false)
 
         // Bind views and Set data
-        binding.productName.text = args.product.name
-        binding.productPrice.text = args.product.price
-        binding.productImage.setImageResource(args.product.imageRes)
+        binding.productName.text = args.product.title
+        binding.productPrice.text = "$${args.product.price}"
+        Timber.d("Product Details: ${args.product}")
+        Timber.d("Product Details: ${args.product.price}")
+        Timber.d("ProductDetailsFragment", "Image URL: ${args.product.image}")
+
+        // Load image using Glide
+        Glide.with(this)
+            .load(args.product.image)
+            .into(binding.productImage)
+
         binding.backIcon.setOnClickListener {
             requireActivity().onBackPressed()
         }
