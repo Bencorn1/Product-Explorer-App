@@ -1,4 +1,4 @@
-package com.example.productexplorerapp
+package com.example.productexplorerapp.ui.productlist
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.productexplorerapp.databinding.ItemProductBinding
+import com.example.productexplorerapp.model.Product
 
 class ProductAdapter :
     ListAdapter<Product, ProductAdapter.ProductViewHolder>(ProductDiffCallback()) {
