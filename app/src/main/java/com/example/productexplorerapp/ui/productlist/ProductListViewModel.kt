@@ -1,7 +1,10 @@
-package com.example.productexplorerapp
+package com.example.productexplorerapp.ui.productlist
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.productexplorerapp.repository.ProductRepository
+import com.example.productexplorerapp.utils.Resource
+import com.example.productexplorerapp.model.Product
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 import kotlinx.coroutines.flow.MutableStateFlow

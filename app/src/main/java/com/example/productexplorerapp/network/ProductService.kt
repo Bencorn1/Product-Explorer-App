@@ -1,5 +1,6 @@
-package com.example.productexplorerapp
+package com.example.productexplorerapp.network
 
+import com.example.productexplorerapp.model.Product
 import retrofit2.http.GET
 
 interface ProductService {

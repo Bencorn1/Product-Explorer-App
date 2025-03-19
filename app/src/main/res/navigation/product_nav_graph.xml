@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/productListFragment"
-        android:name="com.example.productexplorerapp.ProductListFragment"
+        android:name="com.example.productexplorerapp.ui.productlist.ProductListFragment"
         android:label="fragment_product_list"
         tools:layout="@layout/fragment_product_list">
         <action
@@ -17,12 +17,12 @@
 
     <fragment
         android:id="@+id/productDetailsFragment"
-        android:name="com.example.productexplorerapp.ProductDetailsFragment"
+        android:name="com.example.productexplorerapp.ui.productdetail.ProductDetailsFragment"
         android:label="ProductDetailsFragment"
         tools:layout="@layout/fragment_product_details">
         <argument
             android:name="product"
-            app:argType="com.example.productexplorerapp.Product"
+            app:argType="com.example.productexplorerapp.model.Product"
             app:nullable="false" />
     </fragment>
 

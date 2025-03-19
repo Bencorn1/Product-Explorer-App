@@ -1,4 +1,4 @@
-package com.example.productexplorerapp
+package com.example.productexplorerapp.ui.productdetail
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -27,6 +27,7 @@ class ProductDetailsFragment : Fragment() {
         // Bind views and Set data
         binding.productName.text = args.product.title
         binding.productPrice.text = "$${args.product.price}"
+        binding.productDetails.text = args.product.description
         Timber.d("Product Details: ${args.product}")
         Timber.d("Product Details: ${args.product.price}")
         Timber.d("ProductDetailsFragment", "Image URL: ${args.product.image}")
