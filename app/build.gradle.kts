@@ -61,7 +61,7 @@ dependencies {
     kapt("com.google.dagger:hilt-android-compiler:$hilt_version")
 
     // RecyclerView
-    implementation ("androidx.recyclerview:recyclerview:1.3.2")
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
 
     // Coroutines dependencies
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0")
@@ -79,20 +79,41 @@ dependencies {
     implementation("com.jakewharton.timber:timber:5.0.1")
 
     // Gson library
-    implementation ("com.google.code.gson:gson:2.10.1")
+    implementation("com.google.code.gson:gson:2.10.1")
 
     // Navigation Component
-    implementation ("androidx.navigation:navigation-fragment-ktx:2.7.4")
-    implementation ("androidx.navigation:navigation-ui-ktx:2.7.4")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.4")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.4")
 
 //    Glide dependencies
-    implementation ("com.github.bumptech.glide:glide:4.16.0")
-    kapt ("com.github.bumptech.glide:compiler:4.16.0")
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+    kapt("com.github.bumptech.glide:compiler:4.16.0")
 
 //    ROOM library
-    implementation ("androidx.room:room-runtime:2.6.1")
-    kapt ("androidx.room:room-compiler:2.6.1")
-    implementation ("androidx.room:room-ktx:2.6.1")
+    implementation("androidx.room:room-runtime:2.6.1")
+    kapt("androidx.room:room-compiler:2.6.1")
+    implementation("androidx.room:room-ktx:2.6.1")
 
-    implementation ("com.google.android.material:material:1.9.0")
+    implementation("com.google.android.material:material:1.9.0")
+
+    implementation("org.slf4j:slf4j-simple:2.0.9")
+
+    // JUnit 5
+    testImplementation("junit:junit:4.13.2")
+
+    // MockK (for mocking dependencies)
+    testImplementation("io.mockk:mockk:1.13.5")
+
+    // Coroutines Test (for suspend functions)
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4")
+    testImplementation("org.jetbrains.kotlin:kotlin-test:1.9.0")
+    testImplementation("org.jetbrains.kotlin:kotlin-test-junit:1.9.0")
+
+    // Truth (Optional - for better assertions)
+    testImplementation("com.google.truth:truth:1.1.3")
+
+    // Core testing library (for Flow assertions)
+    testImplementation("androidx.arch.core:core-testing:2.1.0")
+    testImplementation("app.cash.turbine:turbine:1.0.0")
+
 }

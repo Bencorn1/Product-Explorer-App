@@ -38,7 +38,7 @@ class SplashActivity : AppCompatActivity() {
         binding.splashLogo.postDelayed({
             startActivity(Intent(this, MainActivity::class.java))
             finish()
-        }, 3000) // 3 seconds delay
+        }, 2000) // 2 seconds delay
 
     }
 
