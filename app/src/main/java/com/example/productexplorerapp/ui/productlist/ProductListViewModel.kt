@@ -21,7 +21,7 @@ class ProductListViewModel @Inject constructor(private var repo: ProductReposito
         fetchProducts()
     }
 
-    private fun fetchProducts() {
+    fun fetchProducts() {
         viewModelScope.launch {
             repo.getProducts().collect { result ->
                 _products.value = result
