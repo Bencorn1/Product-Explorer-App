@@ -28,6 +28,7 @@ class ProductDetailsFragment : Fragment() {
         binding.productName.text = args.product.title
         binding.productPrice.text = "$${args.product.price}"
         binding.productDetails.text = args.product.description
+        binding.productCategory.text = "Category: ${args.product.category}"
         Timber.d("Product Details: ${args.product}")
         Timber.d("Product Details: ${args.product.price}")
         Timber.d("ProductDetailsFragment", "Image URL: ${args.product.image}")

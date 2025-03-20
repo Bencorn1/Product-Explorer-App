@@ -1,4 +1,4 @@
-package com.example.productexplorerapp
+package com.example.productexplorerapp.ui
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -7,6 +7,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
+import com.example.productexplorerapp.R
 import com.example.productexplorerapp.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
